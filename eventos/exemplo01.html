@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela Dinamica teste</title>
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+        input:invalid {
+            border-color: red !important;
+        }
+
+        input:valid {
+            border-color: green !important;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <main>
+        <input formControlName="sGPTypeDeliveryId" type="number" placeholder="apenas números ou será inválido" id="board-size" min="5" max="25"required="required" pattern="[0-9]+$">
+        <button type="button" value="Genera una tabela" id="generate-board">VQV</button>
+        <br>
+        Esse input só vai ser válido se tiver apenas números
+        <input formControlName="sGPTypeDeliveryId" type="text" placeholder="apenas números ou será inválido" class="form-control" required="required" pattern="[0-9]+$">
+        <br>
+        Esse input é do type="number" ele só deixa escrever números dentro
+        <input type="number" class="form-control">
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

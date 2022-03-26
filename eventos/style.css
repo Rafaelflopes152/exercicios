@@ -12,6 +12,8 @@ body {
     width: 100vw;
   }
   
+  div { width:100px; height:100px; background-color:#C00; margin:10px; display:inline-block;}
+
   .container {
     display: flex;
     flex-flow: row wrap;

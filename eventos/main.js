@@ -3,6 +3,7 @@ const secondLi = document.getElementById('second-li');
 const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
+var mybody =document.getElementsByTagName("body")[0];
 
 // 1. Copie esse arquivo e edite apenas ele;
 // 1.1. Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
@@ -46,3 +47,42 @@ myWebpage.addEventListener('mouseover', function(event) {
 myWebpage.addEventListener('mouseout', function(event) {
   event.target.style.color = 'unset';
 });
+
+function set_background() {
+    // obtém uma lista de todos os elementos do corpo (só haverá um),
+    // e então selecione o zero (ou primeiro) tal elemento
+    myBody = document.getElementsByTagName("body")[0];
+  
+    // agora, pegue todos os p elementos que são descendentes do corpo
+    myBodyElements = myBody.getElementsByTagName("p");
+  
+    // obter o segundo item da lista de elementos p
+    myP = myBodyElements[1];
+    myP.style.background = "rgb(255,0,0)";
+  }
+
+function start() {
+    mytable     = document.createElement("table");
+    mytablebody = document.createElement("tbody");
+
+    for(var j = 0; j < 2; j++) {
+        mycurrent_row=document.createElement("tr");
+        for(var i = 0; i < 2; i++) {
+            mycurrent_cell = document.createElement("td");
+            currenttext = document.createTextNode("cell is:" + i + j);
+            mycurrent_cell.appendChild(currenttext);
+            mycurrent_row.appendChild(mycurrent_cell);
+            // definir a cor de fundo da célula
+            // if the column is 0. If the column is 1 hide the cel
+            if (i == 0) {
+                mycurrent_cell.style.background = "rgb(255,0,0)";
+            } else {
+                mycurrent_cell.style.display = "none";
+            }
+        }
+        mytablebody.appendChild(mycurrent_row);
+    }
+    mytable.appendChild(mytablebody);
+    mybody.appendChild(mytable);
+ }
+
