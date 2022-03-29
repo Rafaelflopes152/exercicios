@@ -1,0 +1,10 @@
+/* li{
+    background-color:rgb(119, 202, 102);
+}  */
+
+.selected{
+    background-color: gray;
+}
+.completed{
+    text-decoration: line-through solid black;
+}

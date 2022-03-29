@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Pixels Art</title>
+    <link rel="stylesheet" href="/styleArt.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Paleta de Cores</h1>
+    </header>
+    <main>
+        <section id="color-palette">
+            <div id="color1" class="color selected"></div>
+            <div id="color2" class="color"></div>
+            <div id="color3" class="color"></div>
+            <div id="color4" class="color"></div>
+        </section>
+        <div id="limpar">
+            <label for="board-size"> Tamanho do Board entre 5 e 50</label>
+            <input type="number"  name="tamanho_pixels" id="board-size" required="alert('Board inválido!')" min="5" max="50" pattern="[0-50]">
+            <button type="submit" id="generate-board">VQV</button>
+            <hr>
+            <button type="reset" id="clear-board">Limpar</button>
+        </div>
+
+        <table id="pixel-board">
+
+        </table>
+    </main>
+    <footer>
+        <script type="text/javascript" src="/scriptArt.js">
+           
+        </script>
+        <script>  </script>
+    </footer>
+</body>
+</html>
