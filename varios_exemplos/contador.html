@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contador</title>
+</head>
+
+<body>
+  <span id="cont">50</span> Restantes <br>
+  <textarea onkeyup="limite_textarea(this.value)" id="texto"></textarea>
+
+
+  <script>
+    function limite_textarea(valor) {
+      quant = 50;
+      total = valor.length;
+      if (total <= quant) {
+        resto = quant - total;
+        document.getElementById('cont').innerHTML = resto;
+      } else {
+        document.getElementById('texto').value = valor.substr(0, quant);
+      }
+    }
+  </script>
+</body>
+
+</html>

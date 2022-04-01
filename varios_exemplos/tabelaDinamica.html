@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Inserindo linhas em uma tabela com JavaScript</title>
+<script language="javascript">
+        // Função responsável por inserir linhas na tabela
+        function inserirLinhaTabela() {
+
+            // Captura a referência da tabela com id “minhaTabela”
+            var table = document.getElementById("minhaTabela");
+            // Captura a quantidade de linhas já existentes na tabela
+            var numOfRows = table.rows.length;
+            // Captura a quantidade de colunas da última linha da tabela
+            var numOfCols = table.rows[numOfRows-1].cells.length;
+
+            // Insere uma linha no fim da tabela.
+            var newRow = table.insertRow(numOfRows);
+ 
+            // Faz um loop para criar as colunas
+            for (var j = 0; j < numOfCols; j++) {
+                // Insere uma coluna na nova linha 
+                newCell = newRow.insertCell(j);
+                // Insere um conteúdo na coluna
+                newCell.innerHTML = "Linha "+ numOfRows + " – Coluna "+ j;
+            }
+
+        }
+</script>
+</head>
+<body>
+        <!-- Tabela simples contendo linhas e colunas -->
+        <table id="minhaTabela" border="1">
+            <tr>
+                <td>
+                    Linha 0 - Coluna 0
+                </td>
+                <td>
+                    Linha 0 - Coluna 1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Linha 1 - Coluna 0
+                </td>
+                <td>
+                    Linha 1 - Coluna 1
+                </td>
+            </tr>
+        </table>
+        <!-- Este botão quando acionado irá chamar a função responsável em inserir a linha na tabela -->
+        <input type="button" value="Inserir Linha" onclick="inserirLinhaTabela()"  />
+</body>
+</html>
